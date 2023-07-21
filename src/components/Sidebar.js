@@ -6,9 +6,8 @@ import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
-import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-import LanguageSelector from './LanguageSelector';
+
 
 const Nav = styled.div`
   background: #818181;
@@ -49,8 +48,6 @@ const Sidebar = () => {
 
   const showSidebar = () => setSidebar(!sidebar);
 
-
-  const { t } = useTranslation();
 
   return (
     <>

@@ -6,7 +6,7 @@ const rev = [
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg',
       text:
-        "Staff were Courteous￼, professional and knowledgeable. Room was comfortable, clean and quiet( big bonus for this) As a solo traveller I felt safe.",
+        "Staff were courteous,professional and knowledgeable. Room was comfortable, clean and quiet( big bonus for this) As a solo traveller I felt safe.",
     },
     {
       id: 2,

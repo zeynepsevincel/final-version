@@ -174,7 +174,7 @@ export const Home = () => {
             marginLeft: "1200px",
           }}
         >
-          Explore
+          {t("Home.explore")}
         </Button>
       </div>
     </div>
