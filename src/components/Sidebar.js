@@ -59,19 +59,10 @@ const Sidebar = () => {
           <NavIcon to="#">
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
-          <h1
-            style={{
-              textAlign: "center",
-              marginLeft: "650px",
-              color: "white",
-              fontWeight: "bold",
-            }}
-          >
-            SUNSET INN
-          </h1>
-          <div style={{marginLeft:"400px"}}>
+          <img style={{marginLeft:"700px",height:"200px"}} src="https://i.ibb.co/T8vyXsj/logo-transparent.png" alt="bug" height={100} />
+          <div style={{marginLeft:"500px"}}>
           <LanguageSwitcher />
-        
+    
           </div>
         </Nav>
         <SidebarNav sidebar={sidebar}>
