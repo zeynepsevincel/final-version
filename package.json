@@ -1,6 +1,7 @@
 {
   "name": "ssinn",
   "version": "0.1.0",
+  "homepage": "https://zeynepsevincel.github.io/final-version/src/pages/Home",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.14.7",
