@@ -1,0 +1,41 @@
+[
+      {
+      "id": 1,
+      "name": "Deluxe Room",
+      "category": "Room for two",
+      "price": 150,
+      "imageUrl": "https://image-tc.galaxy.tf/wijpeg-afu0zj5rhmyyirzditj3g96mk/deluxe-room-king-1-2000px.jpg"
+      
+    },
+
+    {
+        "id": 2,
+        "name": "Family Suite",
+        "category": "Room for 2+",
+        "price": 200,
+        "imageUrl": "https://www.kidsonaplane.com/wp-content/uploads/2019/09/New-York-City-Hotels-with-Family-Suites-Budget-Hotel-Near-Chinatown-Leon-Hotel.jpg"
+      },
+
+     
+
+     
+      {
+        "id": 3,
+        "name": "Ocean View",
+        "category": "Room for 2+",
+        "price": 175,
+        "imageUrl": "https://www.queenkapiolani.com/files/4987/kapiolaniRoomsPremierOceanViewBalconyKing01.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Executive Suite",
+        "category": "Room for two",
+        "price": 150,
+        "imageUrl": "https://www.chelseatoronto.com/en/uploads/images/2023/03/chelsea-hotel-executive-room2.jpg"
+      }
+      
+      
+
+
+
+] 

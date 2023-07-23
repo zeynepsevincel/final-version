@@ -1,12 +1,75 @@
-import React from "react";
+import React, { useState } from 'react';
+import FacetCheckbox from '../components/FacetCheckbox';
+import SearchResults from '../components/SearchResults';
+import data from '../data.json'; 
+import '../rooms.css';
+import { Parallax } from "react-parallax";
+
 
 export const Rooms = () => {
-return (
-	<div className="home">
-	</div>
-);
-};
+    const imageDemo =
+    'https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-black-atmosphere-hotel-voucher-image_262050.jpg';
+  const [results, setResults] = useState(data);
+  const [selectedFacets, setSelectedFacets] = useState({});
 
+  const handleFacetChange = (facetName, facetValue, checked) => {
+    setSelectedFacets(prevFacets => ({
+      ...prevFacets,
+      [facetName]: checked
+        ? [...(prevFacets[facetName] || []), facetValue]
+        : prevFacets[facetName].filter(val => val !== facetValue),
+    }));
+  };
+
+  // Apply faceted filtering to the data
+  const filteredResults = results.filter(item => {
+    // Check if each facet matches the selected values
+    return Object.entries(selectedFacets).every(([facetName, facetValues]) => {
+      if (facetValues.length === 0) return true; // Skip if no filters applied for this facet
+      if (facetName === 'price') {
+        return facetValues.some(range => {
+          const [minPrice, maxPrice] = range.split('-').map(Number);
+          return item.price >= minPrice && item.price <= maxPrice;
+        });
+      } else {
+        return facetValues.includes(item[facetName]);
+      }
+    });
+  });
+
+  // Category options for FacetCheckbox
+  const categoryOptions = [
+    { value: 'Room for two', label: 'Room for two' },
+    { value: 'Room for 2+', label: 'Room for 2+' },
+  ];
+
+  // Numeric price ranges for FacetCheckbox
+  const priceRanges = [
+    { value: '0-150', label: '$0-$150' },
+    { value: '150-200', label: '$150-$200' },
+  ];
+
+  return (
+    <div className="home">
+      <div>
+        <Parallax bgImage={imageDemo} strength={500}>
+          <div style={{ height: 570 }}>
+            <h1 style={{ marginLeft: '40%', marginTop: '40px', marginBottom: '50px', color: 'white' }}>Our Rooms</h1>
+            <h2 style={{ marginLeft: '20%', marginTop: '40px', marginBottom: '50px', color: 'white' }}>
+              Compare our rooms and choose the one you like the best!
+            </h2>
+          </div>
+        </Parallax>
+
+        <div>
+          <FacetCheckbox name="category" values={categoryOptions} onChange={handleFacetChange} />
+          <FacetCheckbox name="price" values={priceRanges} onChange={handleFacetChange} />
+        </div>
+        <SearchResults results={filteredResults} />
+      </div>
+    </div>
+  );
+};
 export const Deluxe = () => {
 return (
 	<div className="home">

@@ -8,7 +8,7 @@ export const SidebarData = [
   },
   {
     title: "Rooms",
-    path: "#",
+    path: "/rooms",
 
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,

@@ -56,7 +56,7 @@ const Sidebar = () => {
           <NavIcon to="#">
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
-          <img style={{marginLeft:"700px",height:"200px"}} src="https://i.ibb.co/T8vyXsj/logo-transparent.png" alt="bug" height={100} />
+          <img style={{marginLeft:"750px",height:"200px"}} src="https://i.ibb.co/T8vyXsj/logo-transparent.png" alt="bug" height={100} />
           <div style={{marginLeft:"500px"}}>
           <LanguageSwitcher />
     
